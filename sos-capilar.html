@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>S.O.S Crescimento - Lizzante Professional</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            color: #333;
+            line-height: 1.6;
+            background-color: #f4cccc; 
+            background-image: linear-gradient(30deg, #d9534f 12%, transparent 12.5%, transparent 87%, #d9534f 87.5%, #d9534f),
+            linear-gradient(150deg, #d9534f 12%, transparent 12.5%, transparent 87%, #d9534f 87.5%, #d9534f),
+            linear-gradient(60deg, #a94442 25%, transparent 25.5%, transparent 75%, #a94442 75%, #a94442);
+            background-size: 60px 105px;
+            background-attachment: fixed;
+        }
+
+        .container {
+            max-width: 500px;
+            margin: 10px auto;
+            background-color: #ffffff;
+            padding: 15px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            border-top: 8px solid #d9534f;
+            text-align: center;
+        }
+
+        .badge {
+            background-color: #d9534f;
+            color: white;
+            padding: 4px 12px;
+            border-radius: 50px;
+            font-weight: bold;
+            font-size: 12px;
+            text-transform: uppercase;
+        }
+
+        .headline {
+            font-size: 22px;
+            font-weight: 800;
+            color: #a94442;
+            margin: 10px 0;
+            line-height: 1.2;
+        }
+
+        .carousel-container {
+            position: relative;
+            width: 100%;
+            max-width: 400px;
+            margin: 0 auto 15px;
+            overflow: hidden;
+            border-radius: 10px;
+            background-color: #f9f9f9;
+        }
+
+        .carousel-slides {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+            align-items: center;
+        }
+
+        .carousel-slides img {
+            width: 100%;
+            height: auto;
+            max-height: 450px;
+            object-fit: contain;
+            flex-shrink: 0;
+        }
+
+        .carousel-btn {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: rgba(0,0,0,0.4);
+            color: white;
+            border: none;
+            width: 40px;
+            height: 40px;
+            cursor: pointer;
+            border-radius: 50%;
+            font-size: 20px;
+            z-index: 10;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .btn-prev { left: 5px; }
+        .btn-next { right: 5px; }
+
+        .desafio-box {
+            background-color: #f2dede;
+            border: 2px dashed #a94442;
+            padding: 12px;
+            border-radius: 10px;
+            margin: 15px 0;
+        }
+
+        .desafio-title {
+            color: #a94442;
+            font-weight: 900;
+            font-size: 18px;
+            text-transform: uppercase;
+        }
+
+        .beneficios {
+            text-align: left;
+            list-style: none;
+            margin: 15px 0;
+            padding: 12px;
+            background: #f9f9f9;
+            border-radius: 8px;
+            border-left: 4px solid #d9534f;
+        }
+
+        .beneficios li {
+            margin-bottom: 8px;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            font-size: 14px;
+        }
+
+        .beneficios li::before {
+            content: "✔";
+            margin-right: 8px;
+            color: #d9534f;
+        }
+
+        @keyframes pulse-red {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.03); }
+            100% { transform: scale(1); }
+        }
+
+        .cta-btn {
+            display: block;
+            background-color: #d9534f;
+            color: white;
+            text-align: center;
+            padding: 18px 10px;
+            font-size: 18px;
+            font-weight: 900;
+            text-decoration: none;
+            border-radius: 10px;
+            text-transform: uppercase;
+            animation: pulse-red 2s infinite ease-in-out;
+            box-shadow: 0 4px 15px rgba(217, 83, 79, 0.4);
+        }
+
+        .footer {
+            font-size: 11px;
+            color: #a94442;
+            margin-top: 20px;
+            border-top: 1px solid #eee;
+            padding-top: 10px;
+        }
+
+        @media (max-width: 380px) {
+            .headline { font-size: 18px; }
+            .cta-btn { font-size: 16px; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <span class="badge">Kit Nº 1 em Crescimento</span>
+        <h1 class="headline">Paralise a queda e estimule o crescimento 7x mais rápido!</h1>
+
+        <div class="carousel-container">
+            <button class="carousel-btn btn-prev" onclick="moveSlide(-1)">❮</button>
+            <div class="carousel-slides" id="carouselSlides">
+                <img src="https://i.ibb.co/bMrBH2VM/image-2.png" alt="Produto Principal">
+                <img src="https://i.ibb.co/0ppG8BPG/Whats-App-Image-2022-08-16-at-14-27-06.webp" alt="Antes e Depois 1">
+                <img src="https://i.ibb.co/3yd2SkCk/Whats-App-Image-2022-08-16-at-14-27-07.webp" alt="Antes e Depois 2">
+                <img src="https://i.ibb.co/zHSF8qyq/Whats-App-Image-2022-08-16-at-14-27-08.webp" alt="Antes e Depois 3">
+            </div>
+            <button class="carousel-btn btn-next" onclick="moveSlide(1)">❯</button>
+        </div>
+
+        <div class="desafio-box">
+            <p class="desafio-title">🛡️ DESAFIO 60 DIAS</p>
+            <p style="font-weight: bold; font-size: 14px;">USE E COMPROVE OS RESULTADOS!</p>
+        </div>
+
+        <ul class="beneficios">
+            <li>Paralisa até 95% da queda capilar.</li>
+            <li>Crescimento 7x mais rápido.</li>
+            <li>Preenche falhas e trata alopecia.</li>
+            <li>Compatível com qualquer química.</li>
+        </ul>
+
+        <a href="https://app.monetizze.com.br/r/ARN25767449" class="cta-btn">QUERO MEU KIT COM DESCONTO</a>
+
+        <div class="footer">
+            ✔️ Testado e Aprovado pela ANVISA<br>
+            🔒 Compra Segura | © 2026 Lizzante Professional
+        </div>
+    </div>
+
+    <script>
+        let currentSlide = 0;
+        const slides = document.getElementById('carouselSlides');
+        const totalSlides = 4;
+
+        function moveSlide(step) {
+            currentSlide = (currentSlide + step + totalSlides) % totalSlides;
+            slides.style.transform = `translateX(-${currentSlide * 100}%)`;
+        }
+
+        setInterval(() => moveSlide(1), 5000);
+    </script>
+
+</body>
+</html>
