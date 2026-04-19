@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NutralFit - Clareador Premium</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;800&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --bege-suave: #fdf5f2;
+            --bege-escuro: #f5e6e0;
+            --rosa-pastel: #e8a598;
+            --rosa-hover: #d48a7d;
+            --branco: #ffffff;
+            --texto: #4a4a4a;
+            --serifa: 'Playfair Display', serif;
+            --sans: 'Montserrat', sans-serif;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            background-color: var(--bege-suave);
+            color: var(--texto);
+            font-family: var(--sans);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        h1, h2, h3 { font-family: var(--serifa); }
+
+        /* Animações */
+        @keyframes pulse {
+            0% { transform: scale(1); box-shadow: 0 0 0 0 rgba(232, 165, 152, 0.4); }
+            70% { transform: scale(1.05); box-shadow: 0 0 0 10px rgba(232, 165, 152, 0); }
+            100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(232, 165, 152, 0); }
+        }
+
+        @keyframes shine {
+            0% { left: -100%; }
+            20% { left: 100%; }
+            100% { left: 100%; }
+        }
+
+        .reveal { opacity: 0; transform: translateY(20px); transition: all 0.8s ease-out; }
+        .reveal.active { opacity: 1; transform: translateY(0); }
+
+        /* Header com Logo Otimizado */
+        header {
+            background-color: rgba(255, 255, 255, 0.95);
+            padding: 10px;
+            text-align: center;
+            border-bottom: 1px solid var(--bege-escuro);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .logo-img {
+            max-height: 45px; /* Reduzido para não ocupar muito topo no celular */
+            width: auto;
+        }
+
+        /* Seção Hero Otimizada */
+        .hero {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 30px 20px;
+            text-align: center;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .hero h1 { font-size: 28px; color: #2c2c2c; margin-bottom: 12px; }
+        .hero p { font-size: 16px; margin-bottom: 20px; max-width: 500px; }
+
+        .hero-img {
+            max-width: 220px; /* Tamanho reduzido para mobile */
+            border-radius: 12px;
+            margin-top: 15px;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+        }
+
+        /* Botão */
+        .btn-cta {
+            display: inline-block;
+            background-color: var(--rosa-pastel);
+            color: white;
+            padding: 15px 35px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 16px;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+            border: none;
+            cursor: pointer;
+            animation: pulse 2s infinite;
+        }
+
+        .btn-cta:hover { background-color: var(--rosa-hover); }
+
+        .btn-cta::after {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -100%;
+            width: 50%;
+            height: 200%;
+            background: rgba(255, 255, 255, 0.4);
+            transform: rotate(30deg);
+            animation: shine 3s infinite;
+        }
+
+        /* Benefícios */
+        .benefits { background-color: var(--branco); padding: 40px 20px; }
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+        .benefit-card {
+            text-align: center;
+            padding: 20px;
+            background: var(--bege-suave);
+            border-radius: 12px;
+        }
+        .benefit-card h3 { font-size: 18px; margin-bottom: 5px; }
+        .benefit-card p { font-size: 14px; }
+
+        /* Carrossel Reduzido */
+        .carousel-section { padding: 40px 15px; text-align: center; }
+        .carousel-section h2 { font-size: 24px; margin-bottom: 20px; }
+
+        .carousel-container {
+            max-width: 320px; /* Tamanho das imagens do antes e depois bem otimizado para mobile */
+            margin: 0 auto;
+            position: relative;
+            overflow: hidden;
+            border-radius: 12px;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+        }
+
+        .carousel-track {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+        }
+
+        .carousel-track img {
+            width: 100%;
+            height: auto;
+            flex-shrink: 0;
+        }
+
+        /* Seção de Oferta */
+        .offer { padding: 50px 20px; background-color: var(--bege-escuro); text-align: center; }
+        .offer-card {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            display: inline-block;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+            max-width: 90%;
+        }
+        .offer-card h3 { margin-bottom: 15px; font-size: 22px; }
+
+        footer { padding: 30px; text-align: center; font-size: 12px; color: #888; background: var(--branco); }
+
+        /* Desktop Ajustes */
+        @media (min-width: 768px) {
+            .hero { flex-direction: row; text-align: left; padding: 60px 20px; justify-content: center; }
+            .hero-text { padding-right: 40px; }
+            .hero h1 { font-size: 42px; }
+            .hero-img { max-width: 280px; }
+            .carousel-container { max-width: 450px; }
+            .logo-img { max-height: 55px; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <img src="https://i.ibb.co/fhkcrXm/STORIES-FRACTAL-1024x396.png" alt="Logo Vitalizesi" class="logo-img">
+    </header>
+
+    <section class="hero">
+        <div class="hero-text reveal">
+            <h1>Sua pele impecável, livre de manchas.</h1>
+            <p>Recupere sua autoconfiança com a fórmula concentrada do NutralFit. Pele uniforme e renovada.</p>
+            <a href="#comprar" class="btn-cta">QUERO MINHA PELE RENOVADA</a>
+        </div>
+        <img src="https://i.ibb.co/99cnsnth/Whats-App-Image-2026-04-19-at-15-59-49.jpg" alt="NutralFit" class="hero-img reveal">
+    </section>
+
+    <section class="benefits">
+        <div class="benefits-grid">
+            <div class="benefit-card reveal">
+                <h3>Clareamento Real</h3>
+                <p>Redução visível de manchas e melasma.</p>
+            </div>
+            <div class="benefit-card reveal">
+                <h3>Hidratação</h3>
+                <p>Com Ácido Hialurônico e Vitamina E.</p>
+            </div>
+            <div class="benefit-card reveal">
+                <h3>Toque Seco</h3>
+                <p>Efeito aveludado para todo tipo de pele.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="carousel-section">
+        <h2 class="reveal">Resultados Reais</h2>
+        <div class="carousel-container reveal">
+            <div class="carousel-track" id="track">
+                <img src="https://i.ibb.co/cpFXSk5/Texto-do-seu-paragrafo-68.png" alt="Antes e Depois 1">
+                <img src="https://i.ibb.co/BKCD8B1k/DEP3-1-png.webp" alt="Antes e Depois 2">
+                <img src="https://i.ibb.co/nsVSVrdk/DEP2-1-png.webp" alt="Antes e Depois 3">
+                <img src="https://i.ibb.co/GQYz37Tc/DEP1-1-png.webp" alt="Antes e Depois 4">
+            </div>
+        </div>
+        <p style="margin-top: 12px; font-size: 13px; color: #999;">(Arraste para o lado ou aguarde)</p>
+    </section>
+
+    <section class="offer" id="comprar">
+        <div class="offer-card reveal">
+            <h3>Garanta o seu NutralFit</h3>
+            <p style="margin-bottom: 20px; font-size: 15px;">Clique no botão abaixo para ver as ofertas.</p>
+            <a href="https://app.monetizze.com.br/r/AGK25767361" class="btn-cta">VER PREÇOS E COMPRAR</a>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 Vitalizesi | NutralFit</p>
+    </footer>
+
+    <script>
+        // Animação ao rolar a página
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) entry.target.classList.add('active');
+            });
+        }, { threshold: 0.05 });
+        document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+        // Carrossel Automático
+        const track = document.getElementById('track');
+        let index = 0;
+        setInterval(() => {
+            index = (index + 1) % 4;
+            track.style.transform = `translateX(-${index * 100}%)`;
+        }, 3000);
+    </script>
+
+</body>
+</html>
