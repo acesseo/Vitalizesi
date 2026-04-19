@@ -8,13 +8,6 @@
       gtag('js', new Date());
 
       gtag('config', 'AW-18056803055');
-
-      // Snippet de evento de conversão
-      gtag('event', 'conversion', {
-          'send_to': 'AW-18056803055/oyLWCJbrr54cEO_lk6JD',
-          'value': 1.0,
-          'currency': 'BRL'
-      });
     </script>
     
     <meta charset="UTF-8">
@@ -52,6 +45,7 @@
             color: #2c1e12;
             margin-bottom: 12px;
             line-height: 1.2;
+            text-align: center;
         }
 
         .subheadline {
@@ -59,13 +53,14 @@
             font-weight: 600;
             color: #b32d00;
             margin-bottom: 18px;
+            text-align: center;
         }
 
         .produto-img {
             width: 100%;
             height: auto;
             max-height: 350px;
-            object-fit: cover;
+            object-fit: contain;
             border-radius: 8px;
             margin-bottom: 18px;
             display: block;
@@ -121,7 +116,11 @@
             border-radius: 8px;
             text-transform: uppercase;
             box-shadow: 0 5px 15px rgba(46, 125, 50, 0.4);
-            transition: all 0.2s ease;
+            transition: transform 0.2s ease;
+        }
+
+        .cta-btn:active {
+            transform: scale(0.98);
         }
 
         .footer {
@@ -133,7 +132,7 @@
             border-top: 1px solid #d7ccc8;
         }
 
-        .footer a { color: #6d4c41; margin: 0 6px; }
+        .footer a { color: #6d4c41; margin: 0 6px; text-decoration: none; }
     </style>
 </head>
 <body>
@@ -165,7 +164,7 @@
 
         <div class="footer">
             <a href="#">Termos de Uso</a> | <a href="#">Política de Privacidade</a>
-            <p style="margin-top:8px; opacity:0.7;">Este site não é afiliado ao Google Inc.</p>
+            <p style="margin-top:8px; opacity:0.7;">Este site não é afiliado ao Google Inc. | © 2026 Vitalizesi</p>
         </div>
     </div>
 
