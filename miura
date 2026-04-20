@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vitalizesi - Amora Miúra + Vit</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;800&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            background: radial-gradient(circle at top, #5e1bbf 0%, #2c0052 100%);
+            color: #ffffff;
+            display: flex;
+            justify-content: center;
+            min-height: 100vh;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 450px;
+            padding-bottom: 60px;
+            background: rgba(255, 255, 255, 0.03);
+            border-left: 1px solid rgba(255, 255, 255, 0.05);
+            border-right: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        /* Ajuste de espaçamento no Header */
+        header {
+            padding: 25px 20px 5px 20px; /* Reduzido o padding inferior para 5px */
+            text-align: center;
+        }
+
+        .logo-img {
+            width: 140px;
+            height: auto;
+            filter: drop-shadow(0 0 8px rgba(255,255,255,0.2));
+        }
+
+        .content {
+            padding: 0 25px;
+            text-align: center;
+        }
+
+        /* Título mais próximo da logo */
+        .headline {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 28px;
+            font-weight: 800;
+            line-height: 1.1;
+            margin-top: 5px; /* Adicionado margem mínima no topo */
+            margin-bottom: 15px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+
+        .sub-headline {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 15px;
+            font-weight: 400;
+            color: #e1bee7;
+            margin-bottom: 25px;
+            line-height: 1.6;
+        }
+
+        .image-wrapper {
+            margin: 15px auto;
+            max-width: 180px;
+            border: 2px solid rgba(212, 175, 55, 0.3);
+            border-radius: 15px;
+            padding: 5px;
+            background: rgba(255,255,255,0.1);
+        }
+
+        .produto-img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+
+        .benefits-list {
+            text-align: left;
+            background: linear-gradient(135deg, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0.05) 100%);
+            padding: 20px;
+            border-radius: 20px;
+            margin: 25px 0;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .benefit-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 12px;
+            font-size: 14px;
+            font-weight: 500;
+        }
+
+        .icon-check {
+            color: #d4af37;
+            margin-right: 12px;
+            font-size: 18px;
+        }
+
+        .guarantee-container {
+            margin: 25px 0;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 15px;
+            color: #333;
+        }
+
+        .guarantee-img {
+            width: 60px;
+            height: auto;
+            margin-bottom: 10px;
+        }
+
+        .guarantee-box-text {
+            font-size: 14px;
+            line-height: 1.5;
+            color: #444;
+        }
+
+        .cta-button {
+            display: block;
+            width: 100%;
+            background: linear-gradient(180deg, #d4af37 0%, #b8860b 100%);
+            color: #000;
+            text-align: center;
+            padding: 20px;
+            border-radius: 50px;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 800;
+            font-size: 17px;
+            text-decoration: none;
+            text-transform: uppercase;
+            box-shadow: 0 8px 25px rgba(212, 175, 55, 0.4);
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            70% { transform: scale(1.04); }
+            100% { transform: scale(1); }
+        }
+
+        footer {
+            padding: 40px 20px;
+            text-align: center;
+            font-size: 11px;
+            color: rgba(255, 255, 255, 0.4);
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <header>
+        <img src="https://i.ibb.co/rGjSksSf/remarkt-2022-05-04-T215933-337-removebg-preview.png" alt="Vitalizesi Logo" class="logo-img">
+    </header>
+
+    <div class="content">
+        <h1 class="headline">Diga Adeus aos Sintomas da Menopausa!</h1>
+
+        <p class="sub-headline">
+            O 1° Tratamento contra os sintomas da Menopausa, 100% Natural e Livre de Hormônios Sintéticos.
+        </p>
+
+        <div class="image-wrapper">
+            <img src="https://i.ibb.co/rR781hjz/Whats-App-Image-2026-04-19-at-23-14-53.jpg" alt="Amora Miúra + Vit" class="produto-img">
+        </div>
+
+        <div class="benefits-list">
+            <div class="benefit-item"><span class="icon-check">✔</span> Alívio dos Fogachos (Calores)</div>
+            <div class="benefit-item"><span class="icon-check">✔</span> Melhora a qualidade do sono</div>
+            <div class="benefit-item"><span class="icon-check">✔</span> Menos inchaço e dores no corpo</div>
+            <div class="benefit-item"><span class="icon-check">✔</span> Diminui a irritação e estresse</div>
+            <div class="benefit-item"><span class="icon-check">✔</span> Mais energia e disposição</div>
+        </div>
+
+        <div class="guarantee-container">
+            <img src="https://i.ibb.co/LznvgQHF/garantia-2-1-1-1.webp" alt="Garantia" class="guarantee-img">
+            <p class="guarantee-box-text">
+                Confiamos tanto na eficácia do <strong>Amora miúra + Vit</strong> que você terá 30 Dias de Garantia em sua compra. Isso mesmo! Resultados ou seu dinheiro de volta.
+                <br>
+                <strong style="display: block; margin-top: 10px; color: #2c0052;">Compra 100% Segura e Satisfação Garantida!</strong>
+            </p>
+        </div>
+
+        <div class="cta-wrapper">
+            <a href="https://app.monetizze.com.br/r/AGL25767356" class="cta-button">
+                VERIFICAR DISPONIBILIDADE
+            </a>
+        </div>
+    </div>
+
+    <footer>
+        <p>© 2026 Vitalizesi | Site Oficial</p>
+    </footer>
+</div>
+
+</body>
+</html>
