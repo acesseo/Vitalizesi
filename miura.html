@@ -1,6 +1,30 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-18056803055"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'AW-18056803055');
+    </script>
+
+    <script>
+    function gtag_report_conversion(url) {
+      var callback = function () {
+        if (typeof(url) != 'undefined') {
+          window.location = url;
+        }
+      };
+      gtag('event', 'conversion', {
+          'send_to': 'AW-18056803055/Lgr7CPWi4p8cEO_lk6JD',
+          'event_callback': callback
+      });
+      return false;
+    }
+    </script>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Vitalizesi - Amora Miúra + Vit</title>
@@ -28,9 +52,8 @@
             border-right: 1px solid rgba(255, 255, 255, 0.05);
         }
 
-        /* Ajuste de espaçamento no Header */
         header {
-            padding: 25px 20px 5px 20px; /* Reduzido o padding inferior para 5px */
+            padding: 25px 20px 5px 20px;
             text-align: center;
         }
 
@@ -45,13 +68,12 @@
             text-align: center;
         }
 
-        /* Título mais próximo da logo */
         .headline {
             font-family: 'Montserrat', sans-serif;
             font-size: 28px;
             font-weight: 800;
             line-height: 1.1;
-            margin-top: 5px; /* Adicionado margem mínima no topo */
+            margin-top: 5px;
             margin-bottom: 15px;
             text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
         }
@@ -190,7 +212,9 @@
         </div>
 
         <div class="cta-wrapper">
-            <a href="https://app.monetizze.com.br/r/AGL25767356" class="cta-button">
+            <a href="https://app.monetizze.com.br/r/AGL25767356" 
+               onclick="return gtag_report_conversion('https://app.monetizze.com.br/r/AGL25767356')" 
+               class="cta-button">
                 VERIFICAR DISPONIBILIDADE
             </a>
         </div>
