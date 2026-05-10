@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Durazul - Site Oficial</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --azul-premium: #001d3d; 
+            --azul-sessao: #060606; 
+            --laranja-cta: #ff8c00;
+            --laranja-hover: #e67e00;
+            --branco: #ffffff;
+            --texto-cor: #333;
+        }
+
+        /* CORREÇÃO DE ROLAGEM E TRANSBORDO */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        html, body {
+            width: 100%;
+            overflow-x: hidden; /* Impede o balanço lateral */
+            overflow-y: auto;   /* Força a rolagem vertical */
+            background-color: var(--azul-premium);
+            -webkit-overflow-scrolling: touch;
+        }
+
+        body {
+            color: var(--texto-cor);
+            line-height: 1.6;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header */
+        header {
+            padding: 50px 0 30px;
+            text-align: center;
+            color: var(--branco);
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            font-weight: 800;
+            text-transform: uppercase;
+            margin-bottom: 10px;
+        }
+
+        header p {
+            font-size: 1rem;
+            opacity: 0.9;
+            padding: 0 10px;
+        }
+
+        /* Hero / CTA */
+        .main-call {
+            background-color: var(--branco);
+            padding: 40px 0;
+            border-radius: 40px 40px 0 0;
+            text-align: center;
+        }
+
+        .product-img {
+            max-width: 280px;
+            width: 100%;
+            height: auto;
+            margin-bottom: 25px;
+            filter: drop-shadow(0 10px 15px rgba(0,0,0,0.1));
+        }
+
+        .check-list {
+            list-style: none;
+            display: inline-block;
+            text-align: left;
+            margin-bottom: 30px;
+            color: var(--azul-premium);
+            font-weight: 600;
+            font-size: 0.95rem;
+        }
+
+        .check-list li {
+            margin-bottom: 12px;
+            padding-left: 30px;
+            position: relative;
+        }
+
+        .check-list li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: var(--laranja-cta);
+            font-weight: 900;
+        }
+
+        /* Botão Corrigido */
+        .btn-principal {
+            background-color: var(--laranja-cta);
+            color: var(--branco) !important;
+            text-decoration: none;
+            padding: 20px 25px;
+            border-radius: 15px;
+            font-weight: 800;
+            font-size: 1.2rem;
+            display: inline-block;
+            text-transform: uppercase;
+            transition: all 0.3s ease;
+            box-shadow: 0 8px 15px rgba(255, 140, 0, 0.3);
+            width: 90%;
+            max-width: 400px;
+        }
+
+        .btn-principal:hover {
+            background-color: var(--laranja-hover);
+            transform: translateY(-2px);
+        }
+
+        /* Seção Fórmula */
+        .formula {
+            padding: 60px 0;
+            background-color: var(--azul-sessao);
+            color: var(--branco);
+            text-align: center;
+        }
+
+        .formula h2 {
+            margin-bottom: 35px;
+            font-size: 1.6rem;
+        }
+
+        .formula-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+            gap: 25px;
+        }
+
+        .ingrediente-box img {
+            width: 80px;
+            margin-bottom: 10px;
+        }
+
+        /* Segurança */
+        .seguranca {
+            padding: 40px 0;
+            background-color: #f4f4f4;
+            text-align: center;
+        }
+
+        .seguranca img {
+            width: 30px;
+            margin-bottom: 10px;
+        }
+
+        footer {
+            background-color: var(--azul-premium);
+            color: rgba(255,255,255,0.5);
+            padding: 40px 0;
+            text-align: center;
+            font-size: 0.75rem;
+        }
+
+        /* Ajustes Mobile */
+        @media (max-width: 600px) {
+            header h1 { font-size: 2rem; }
+            .main-call { padding: 30px 0; }
+            .btn-principal { font-size: 1rem; padding: 18px; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <h1>Durazul</h1>
+            <p>Aumente sua Disposição e Recupere o Vigor com a Nova Fita Sublingual</p>
+        </div>
+    </header>
+
+    <section class="main-call">
+        <div class="container">
+            <img src="https://i.ibb.co/PZ6qpk43/Tr-s-Caixas.png" alt="Durazul Oficial" class="product-img">
+            
+            <div>
+                <ul class="check-list">
+                    <li>Praticidade e discrição no uso diário</li>
+                    <li>Tecnologia de absorção avançada</li>
+                    <li>Mais controle e disposição</li>
+                </ul>
+            </div>
+
+            <a href="https://app.monetizze.com.br/r/AZB25766545" class="btn-principal">
+                Ver Ofertas no Site Oficial
+            </a>
+            
+            <p style="margin-top: 15px; font-size: 0.8rem; color: #777; padding: 0 20px;">
+                *Você será redirecionado para a página oficial do fabricante.
+            </p>
+        </div>
+    </section>
+
+    <section class="formula">
+        <div class="container">
+            <h2>Composição de Alta Performance</h2>
+            <div class="formula-grid">
+                <div class="ingrediente-box">
+                    <img src="https://i.ibb.co/KjYCRbQm/zinco.png" alt="Zinco">
+                    <p>Zinco</p>
+                </div>
+                <div class="ingrediente-box">
+                    <img src="https://i.ibb.co/gbpvk6HH/Pinus.png" alt="Pinus">
+                    <p>Pinus</p>
+                </div>
+                <div class="ingrediente-box">
+                    <img src="https://i.ibb.co/Q7gvxGX4/Coezima-Q10.png" alt="Coenzima Q10">
+                    <p>Coenzima Q10</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="seguranca">
+        <div class="container">
+            <img src="https://i.ibb.co/qMdmS9kt/cadeado.webp" alt="Seguro">
+            <p><strong>SITE 100% SEGURO</strong></p>
+            <p style="font-size: 0.8rem; color: #666; max-width: 400px; margin: 5px auto; padding: 0 15px;">
+                Embalagem totalmente discreta. A segurança da sua compra é nossa prioridade.
+            </p>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>Este site não é afiliado ao Google Inc. O Durazul é um suplemento alimentar e seus resultados podem variar.</p>
+            <p>&copy; 2026 Durazul – Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
