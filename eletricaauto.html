@@ -1,0 +1,883 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+<title>Curso de Manutenção de Veículos Elétricos | Profissão do Futuro</title>
+
+<meta name="description" content="Aprenda manutenção de veículos elétricos e torne-se especialista em patinetes, motos e mobilidade elétrica. Curso online com certificado e suporte." />
+
+<meta property="og:title" content="Especialista em Veículos Elétricos" />
+<meta property="og:description" content="Domine a manutenção de veículos elétricos e aproveite um mercado em crescimento acelerado." />
+<meta property="og:type" content="website" />
+<meta property="og:image" content="https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=1200&auto=format&fit=crop" />
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+html{
+scroll-behavior:smooth;
+}
+
+body{
+font-family:'Poppins',sans-serif;
+background:#050816;
+color:#fff;
+overflow-x:hidden;
+line-height:1.6;
+}
+
+:root{
+--primary:#00bfff;
+--primary2:#00e0ff;
+--dark:#070b1b;
+--card:#0f172a;
+--text:#e2e8f0;
+--muted:#94a3b8;
+}
+
+body::before{
+content:'';
+position:fixed;
+width:700px;
+height:700px;
+background:radial-gradient(circle, rgba(0,191,255,.15), transparent 70%);
+top:-250px;
+right:-250px;
+z-index:-1;
+}
+
+body::after{
+content:'';
+position:fixed;
+width:600px;
+height:600px;
+background:radial-gradient(circle, rgba(0,191,255,.12), transparent 70%);
+bottom:-250px;
+left:-250px;
+z-index:-1;
+}
+
+.container{
+width:90%;
+max-width:1200px;
+margin:auto;
+}
+
+section{
+padding:90px 0;
+position:relative;
+}
+
+.hero{
+min-height:100vh;
+display:flex;
+align-items:center;
+text-align:center;
+background:
+linear-gradient(rgba(5,8,22,.85), rgba(5,8,22,.95)),
+url('https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=1600&auto=format&fit=crop') center/cover;
+}
+
+.badge{
+display:inline-block;
+padding:10px 18px;
+border:1px solid rgba(0,191,255,.4);
+background:rgba(0,191,255,.1);
+border-radius:50px;
+color:var(--primary2);
+font-size:14px;
+margin-bottom:25px;
+backdrop-filter:blur(10px);
+}
+
+.hero h1{
+font-size:clamp(2.2rem,5vw,4.5rem);
+line-height:1.1;
+font-weight:800;
+margin-bottom:25px;
+}
+
+.hero p{
+max-width:850px;
+margin:0 auto 35px;
+font-size:1.2rem;
+color:var(--text);
+}
+
+.cta-btn{
+display:inline-flex;
+align-items:center;
+justify-content:center;
+padding:18px 34px;
+background:linear-gradient(135deg,var(--primary),var(--primary2));
+color:#001018;
+font-weight:700;
+font-size:1rem;
+border-radius:16px;
+text-decoration:none;
+transition:.3s;
+box-shadow:0 0 25px rgba(0,191,255,.5);
+border:none;
+cursor:pointer;
+}
+
+.cta-btn:hover{
+transform:translateY(-4px) scale(1.03);
+box-shadow:0 0 35px rgba(0,191,255,.8);
+}
+
+.video-box{
+margin-top:60px;
+border-radius:24px;
+overflow:hidden;
+border:1px solid rgba(0,191,255,.3);
+box-shadow:0 0 40px rgba(0,191,255,.2);
+}
+
+.video-box iframe{
+width:100%;
+height:600px;
+border:none;
+}
+
+.section-title{
+text-align:center;
+margin-bottom:60px;
+}
+
+.section-title h2{
+font-size:clamp(2rem,4vw,3rem);
+margin-bottom:15px;
+}
+
+.section-title p{
+color:var(--muted);
+max-width:750px;
+margin:auto;
+}
+
+.grid{
+display:grid;
+gap:25px;
+}
+
+.grid-3{
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+}
+
+.card{
+background:rgba(15,23,42,.8);
+border:1px solid rgba(0,191,255,.15);
+padding:35px;
+border-radius:24px;
+transition:.4s;
+position:relative;
+overflow:hidden;
+backdrop-filter:blur(12px);
+}
+
+.card::before{
+content:'';
+position:absolute;
+width:200px;
+height:200px;
+background:radial-gradient(circle, rgba(0,191,255,.15), transparent 70%);
+top:-80px;
+right:-80px;
+}
+
+.card:hover{
+transform:translateY(-8px);
+border-color:rgba(0,191,255,.4);
+box-shadow:0 0 30px rgba(0,191,255,.15);
+}
+
+.icon{
+font-size:40px;
+margin-bottom:20px;
+}
+
+.card h3{
+margin-bottom:15px;
+font-size:1.3rem;
+}
+
+.card p{
+color:var(--muted);
+}
+
+.stats{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:25px;
+margin-top:50px;
+}
+
+.stat{
+background:linear-gradient(135deg,#0f172a,#111c34);
+padding:35px;
+border-radius:24px;
+text-align:center;
+border:1px solid rgba(0,191,255,.2);
+}
+
+.stat h3{
+font-size:3rem;
+color:var(--primary2);
+margin-bottom:10px;
+}
+
+.offer{
+background:linear-gradient(135deg,#081120,#101f3b);
+border-radius:30px;
+padding:60px;
+text-align:center;
+border:1px solid rgba(0,191,255,.2);
+box-shadow:0 0 40px rgba(0,191,255,.15);
+}
+
+.old-price{
+font-size:1.5rem;
+text-decoration:line-through;
+color:#94a3b8;
+}
+
+.new-price{
+font-size:4rem;
+font-weight:800;
+color:var(--primary2);
+margin:15px 0;
+}
+
+.offer ul{
+list-style:none;
+margin:35px 0;
+}
+
+.offer li{
+margin:12px 0;
+color:var(--text);
+}
+
+.urgency{
+display:inline-block;
+padding:12px 20px;
+background:rgba(255,0,0,.15);
+border:1px solid rgba(255,0,0,.3);
+color:#ffb4b4;
+border-radius:50px;
+margin-bottom:25px;
+}
+
+.testimonials{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+gap:25px;
+}
+
+.testimonial{
+background:rgba(15,23,42,.85);
+padding:30px;
+border-radius:24px;
+border:1px solid rgba(0,191,255,.15);
+}
+
+.user{
+display:flex;
+align-items:center;
+gap:15px;
+margin-bottom:20px;
+}
+
+.user img{
+width:65px;
+height:65px;
+border-radius:50%;
+object-fit:cover;
+border:2px solid var(--primary);
+}
+
+.stars{
+color:#ffd700;
+margin-top:15px;
+}
+
+.faq{
+max-width:900px;
+margin:auto;
+}
+
+.faq-item{
+background:#0f172a;
+border-radius:18px;
+margin-bottom:20px;
+overflow:hidden;
+border:1px solid rgba(0,191,255,.15);
+}
+
+.faq-question{
+padding:22px;
+cursor:pointer;
+font-weight:600;
+display:flex;
+justify-content:space-between;
+align-items:center;
+}
+
+.faq-answer{
+padding:0 22px;
+max-height:0;
+overflow:hidden;
+transition:.4s;
+color:var(--muted);
+}
+
+.faq-item.active .faq-answer{
+padding:0 22px 22px;
+max-height:300px;
+}
+
+footer{
+padding:50px 20px;
+text-align:center;
+border-top:1px solid rgba(255,255,255,.08);
+background:#050816;
+}
+
+footer a{
+color:var(--primary2);
+text-decoration:none;
+margin:0 10px;
+}
+
+.glow-line{
+width:120px;
+height:4px;
+background:linear-gradient(90deg,var(--primary),transparent);
+margin:20px auto;
+border-radius:50px;
+}
+
+@media(max-width:768px){
+
+.hero{
+padding:100px 0;
+}
+
+.video-box iframe{
+height:250px;
+}
+
+.offer{
+padding:35px 25px;
+}
+
+.new-price{
+font-size:3rem;
+}
+
+}
+
+</style>
+</head>
+
+<body>
+
+<section class="hero">
+<div class="container">
+
+<div class="badge">
+⚡ Mercado em crescimento acelerado
+</div>
+
+<h1>
+Torne-se um Especialista em Manutenção de Veículos Elétricos e Lucre com Esse Mercado em Expansão! 🚀
+</h1>
+
+<p>
+Aprenda a diagnosticar e solucionar problemas em patinetes, motos e outros veículos elétricos. Trabalhe profissionalmente na sua oficina, prestando serviços ou atendendo clientes diretamente.
+</p>
+
+<a class="cta-btn" href="https://go.hotmart.com/A105958749N?dp=1" target="_blank">
+QUERO ACESSAR O CURSO
+</a>
+
+<div class="video-box">
+
+<iframe
+src="https://www.youtube.com/embed/zM4dS5QcHa0"
+title="Curso de Veículos Elétricos"
+allowfullscreen>
+</iframe>
+
+</div>
+
+</div>
+</section>
+
+<section>
+
+<div class="container">
+
+<div class="section-title">
+<h2>O Que Você Vai Aprender</h2>
+<div class="glow-line"></div>
+<p>
+Conteúdo completo para atuar profissionalmente com mobilidade elétrica.
+</p>
+</div>
+
+<div class="grid grid-3">
+
+<div class="card">
+<div class="icon">⚡</div>
+<h3>Princípios da Elétrica</h3>
+<p>Entenda os fundamentos essenciais para trabalhar com segurança e eficiência.</p>
+</div>
+
+<div class="card">
+<div class="icon">🔧</div>
+<h3>Uso do Multímetro</h3>
+<p>Aprenda a utilizar a ferramenta indispensável para diagnósticos precisos.</p>
+</div>
+
+<div class="card">
+<div class="icon">🔋</div>
+<h3>Baterias de Chumbo e Lítio</h3>
+<p>Domine o funcionamento, manutenção e cuidados com diferentes tipos de baterias.</p>
+</div>
+
+<div class="card">
+<div class="icon">💻</div>
+<h3>Carregadores e Módulos</h3>
+<p>Descubra como identificar falhas e corrigir problemas nos componentes eletrônicos.</p>
+</div>
+
+<div class="card">
+<div class="icon">🏍️</div>
+<h3>Motores Elétricos e Aceleradores</h3>
+<p>Entenda o funcionamento e como realizar ajustes e reparos.</p>
+</div>
+
+<div class="card">
+<div class="icon">🛠️</div>
+<h3>Diagnóstico de Defeitos e Soluções</h3>
+<p>Torne-se um verdadeiro especialista em identificar e corrigir problemas.</p>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<section>
+
+<div class="container">
+
+<div class="section-title">
+<h2>Diferenciais Exclusivos</h2>
+<div class="glow-line"></div>
+</div>
+
+<div class="grid grid-3">
+
+<div class="card">
+<div class="icon">💡</div>
+<h3>Apoio Direto do Professor</h3>
+<p>Tire dúvidas e receba orientação personalizada durante sua jornada.</p>
+</div>
+
+<div class="card">
+<div class="icon">🤝</div>
+<h3>Grupo Exclusivo de Alunos</h3>
+<p>Networking, troca de experiências e aprendizado contínuo.</p>
+</div>
+
+<div class="card">
+<div class="icon">🎯</div>
+<h3>Mentorias Acompanhadas</h3>
+<p>Suporte direto do instrutor para acelerar seus resultados.</p>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<section>
+
+<div class="container">
+
+<div class="section-title">
+<h2>Mercado e Oportunidade</h2>
+<div class="glow-line"></div>
+<p>
+O setor de mobilidade elétrica cresce rapidamente e a demanda por profissionais qualificados aumenta todos os dias.
+</p>
+</div>
+
+<div class="stats">
+
+<div class="stat">
+<h3>+300%</h3>
+<p>Crescimento do setor nos últimos anos</p>
+</div>
+
+<div class="stat">
+<h3>Alta</h3>
+<p>Demanda por profissionais especializados</p>
+</div>
+
+<div class="stat">
+<h3>Renda</h3>
+<p>Possibilidade de ganhos recorrentes</p>
+</div>
+
+<div class="stat">
+<h3>Oficina</h3>
+<p>Monte seu próprio negócio no setor</p>
+</div>
+
+</div>
+
+<div style="text-align:center;margin-top:50px;">
+<a class="cta-btn" href="https://go.hotmart.com/A105958749N?dp=1" target="_blank">
+QUERO ENTRAR NESSE MERCADO
+</a>
+</div>
+
+</div>
+
+</section>
+
+<section>
+
+<div class="container">
+
+<div class="offer">
+
+<div class="urgency">
+🔥 Oferta promocional por tempo limitado
+</div>
+
+<h2 style="font-size:2.8rem;margin-bottom:20px;">
+Garanta Seu Acesso Hoje
+</h2>
+
+<div class="old-price">
+DE: R$497,00
+</div>
+
+<div class="new-price">
+R$199,00
+</div>
+
+<ul>
+<li>✅ Acesso imediato</li>
+<li>✅ Certificado</li>
+<li>✅ Suporte especializado</li>
+<li>✅ Atualizações futuras</li>
+<li>✅ Garantia de satisfação</li>
+</ul>
+
+<a class="cta-btn" href="https://go.hotmart.com/A105958749N?dp=1" target="_blank">
+QUERO ACESSAR O CURSO AGORA
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+<section>
+
+<div class="container">
+
+<div class="section-title">
+<h2>Para Quem é Este Curso?</h2>
+<div class="glow-line"></div>
+</div>
+
+<div class="grid grid-3">
+
+<div class="card">
+<div class="icon">🔧</div>
+<h3>Mecânicos</h3>
+<p>Amplie seus serviços para o futuro da mobilidade.</p>
+</div>
+
+<div class="card">
+<div class="icon">⚙️</div>
+<h3>Eletricistas Automotivos</h3>
+<p>Domine sistemas elétricos modernos.</p>
+</div>
+
+<div class="card">
+<div class="icon">🚀</div>
+<h3>Iniciantes</h3>
+<p>Comece do zero e aprenda passo a passo.</p>
+</div>
+
+<div class="card">
+<div class="icon">🏪</div>
+<h3>Donos de Oficinas</h3>
+<p>Adicione novos serviços altamente lucrativos.</p>
+</div>
+
+<div class="card">
+<div class="icon">💼</div>
+<h3>Empreendedores</h3>
+<p>Crie uma nova fonte de renda no mercado elétrico.</p>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<section>
+
+<div class="container">
+
+<div class="section-title">
+<h2>Depoimentos de Alunos</h2>
+<div class="glow-line"></div>
+</div>
+
+<div class="testimonials">
+
+<div class="testimonial">
+
+<div class="user">
+<img src="https://randomuser.me/api/portraits/men/32.jpg">
+<div>
+<h4>Lucas Ferreira</h4>
+<small>São Paulo - SP</small>
+</div>
+</div>
+
+<p>
+“Consegui começar a atender clientes em poucas semanas. O conteúdo é muito direto e prático.”
+</p>
+
+<div class="stars">★★★★★</div>
+
+</div>
+
+<div class="testimonial">
+
+<div class="user">
+<img src="https://randomuser.me/api/portraits/women/44.jpg">
+<div>
+<h4>Mariana Costa</h4>
+<small>Belo Horizonte - MG</small>
+</div>
+</div>
+
+<p>
+“Excelente treinamento. Aprendi sobre baterias, módulos e diagnóstico de falhas.”
+</p>
+
+<div class="stars">★★★★★</div>
+
+</div>
+
+<div class="testimonial">
+
+<div class="user">
+<img src="https://randomuser.me/api/portraits/men/75.jpg">
+<div>
+<h4>Rafael Mendes</h4>
+<small>Curitiba - PR</small>
+</div>
+</div>
+
+<p>
+“O mercado está crescendo muito. O curso abriu novas oportunidades para minha oficina.”
+</p>
+
+<div class="stars">★★★★★</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<section>
+
+<div class="container">
+
+<div class="section-title">
+<h2>Perguntas Frequentes</h2>
+<div class="glow-line"></div>
+</div>
+
+<div class="faq">
+
+<div class="faq-item">
+
+<div class="faq-question">
+<span>Como recebo acesso ao curso?</span>
+<span>+</span>
+</div>
+
+<div class="faq-answer">
+<p>
+Após a confirmação do pagamento, o acesso é liberado imediatamente na plataforma online.
+</p>
+</div>
+
+</div>
+
+<div class="faq-item">
+
+<div class="faq-question">
+<span>O curso oferece certificado?</span>
+<span>+</span>
+</div>
+
+<div class="faq-answer">
+<p>
+Sim. Você receberá certificado digital ao concluir o treinamento.
+</p>
+</div>
+
+</div>
+
+<div class="faq-item">
+
+<div class="faq-question">
+<span>Existe suporte para dúvidas?</span>
+<span>+</span>
+</div>
+
+<div class="faq-answer">
+<p>
+Sim. Você terá acesso ao suporte e comunidade exclusiva de alunos.
+</p>
+</div>
+
+</div>
+
+<div class="faq-item">
+
+<div class="faq-question">
+<span>Existe garantia?</span>
+<span>+</span>
+</div>
+
+<div class="faq-answer">
+<p>
+Sim. Você conta com garantia conforme as políticas da plataforma.
+</p>
+</div>
+
+</div>
+
+<div class="faq-item">
+
+<div class="faq-question">
+<span>Quais formas de pagamento são aceitas?</span>
+<span>+</span>
+</div>
+
+<div class="faq-answer">
+<p>
+Cartão de crédito, Pix e boleto bancário.
+</p>
+</div>
+
+</div>
+
+</div>
+
+<div style="text-align:center;margin-top:60px;">
+<a class="cta-btn" href="https://go.hotmart.com/A105958749N?dp=1" target="_blank">
+GARANTIR MINHA VAGA
+</a>
+</div>
+
+</div>
+
+</section>
+
+<footer>
+
+<p style="margin-bottom:15px;">
+<a href="#">Política de Privacidade</a>
+|
+<a href="#">Termos de Uso</a>
+</p>
+
+<p style="color:#94a3b8;">
+Esta página é independente e utilizada para divulgação do treinamento.
+</p>
+
+<p style="margin-top:15px;color:#64748b;">
+© 2026 - Todos os direitos reservados.
+</p>
+
+</footer>
+
+<script>
+
+const faqItems = document.querySelectorAll('.faq-item');
+
+faqItems.forEach(item => {
+
+item.querySelector('.faq-question').addEventListener('click', () => {
+
+item.classList.toggle('active');
+
+});
+
+});
+
+const observer = new IntersectionObserver((entries)=>{
+
+entries.forEach(entry=>{
+
+if(entry.isIntersecting){
+
+entry.target.style.opacity = 1;
+entry.target.style.transform = 'translateY(0px)';
+
+}
+
+});
+
+},{
+threshold:0.1
+});
+
+document.querySelectorAll('.card,.testimonial,.stat,.offer').forEach(el=>{
+
+el.style.opacity = 0;
+el.style.transform = 'translateY(40px)';
+el.style.transition = 'all .8s ease';
+
+observer.observe(el);
+
+});
+
+</script>
+
+</body>
+</html>
